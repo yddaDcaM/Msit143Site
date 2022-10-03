@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Homework";
+}
+
+<h1>Homework</h1>
+<ul id="ul1"></ul>
+@section Scripts
+{
+    <script src="~/js/travel.js"></script>
+    <script>
+        const theUl = document.querySelector("#ul1")
+        const docFrag = document.createDocumentFragment();
+        
+        
+        
+            for (let i = 0, max = DATAS.length; i < max; i++) {
+                //console.log(data.length[i].Name);
+                //console.log(data.length[i].Parkinginfo);
+                //console.log(data.length[i].Add);
+
+                const { Name, Parkinginfo, Add } = DATAS[i]
+                const txtli = document.createTextNode(Name + "," + Add + "," + Parkinginfo)
+                const eleli = document.createElement("li")
+                eleli.appendChild(txtli)
+                docFrag.appendChild(eleli);
+        }
+        theUl.appendChild(docFrag)
+    </script>
+
+
+}

@@ -18,11 +18,18 @@ namespace Msit143Site.Controllers
             _logger = logger;
         }
 
+        public IActionResult Homework()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();
         }
-
+        public IActionResult First()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
